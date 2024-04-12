@@ -1,0 +1,23 @@
+{
+    "name": "acme/backend",
+    "description": "acmeEmprestimos",
+    "autoload": {
+        "psr-4": {
+            "Acme\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alessandro",
+            "email": "avirmond2000@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "kahlan/kahlan": "^5.2",
+        "phpstan/phpstan": "^1.10"
+    },
+    "require": {
+        "phputil/router": "^0.2.14",
+        "phputil/cors": "^0.2.2"
+    }
+}

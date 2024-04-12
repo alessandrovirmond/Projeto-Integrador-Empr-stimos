@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./emprestimo.css">
+    <title>Lista de Empréstimos</title>
+    <script src="node_modules/chart.js/dist/chart.js"></script>
+    <script src="node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</li>
+                <li><a href="./emprestimo.html">Relatórios</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h4 id="UserName"></h4>
+        <p id="UserAdmin"></p>
+
+    </div>
+
+    <h1>Lista de Empréstimos</h1>
+
+
+    <label for="dataInicial">Data Inicial:</label>
+    <input type="date" id="dataInicial">
+
+    <label for="dataFinal">Data Final:</label>
+    <input type="date" id="dataFinal">
+
+    <button id="ListarEmprestimos">Listar Empréstimos</button>
+    <div id="mensagemErro"></div>
+
+
+    <canvas id="MyChart" width="300" height="100"></canvas>
+    <div id="informacoesPeriodo">
+        <p>Total do Período (R$): <span id="totalPeriodo"></span></p>
+        <p>Média do Período (R$): <span id="mediaPeriodo"></span></p>
+    </div>
+    <button id="dados">Exibir Dados</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Data e Hora</th>
+                <th>Cliente</th>
+                <th>CPF</th>
+                <th>Valor Empréstimo (R$)</th>
+                <th>Forma de Pagamento</th>
+                <th>Valor Final (R$)</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaEmprestimos"></tbody>
+    </table>
+
+
+    
+    <button id="logout">Logout</button>
+    <script type="module" src="./main.ts"></script>
+    <script type="module" src="./emprestimo.ts"></script>
+
+
+</body>
+</html>

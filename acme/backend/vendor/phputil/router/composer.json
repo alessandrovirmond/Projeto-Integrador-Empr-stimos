@@ -1,0 +1,27 @@
+{
+    "name": "phputil/router",
+    "description": "ExpressJS-like router for PHP",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-pcre": "*"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^5.2",
+        "phpstan/phpstan": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "phputil\\router\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "kahlan",
+        "test2": "kahlan --reporter=verbose",
+        "cov": "kahlan --coverage",
+        "check": "phpstan analyze src --level=3"
+    }
+}

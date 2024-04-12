@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</li>
+                <li><a href="./emprestimo.html">Relatórios</a></li>
+                <li><a  id="cadastrohtml" href="./cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h4 id="UserName"></h4>
+        <p id="UserAdmin"></p>
+
+    </div>
+
+    <h1>Solicitar Empréstimo</h1>
+            <h2>Procurar Cliente</h2>
+            
+            <div id="app">
+                <input id="cpfInput" placeholder="Digite o CPF" />
+                <button id="consultarCPFButton">Consultar</button>
+                
+                      
+                <div id="clienteEncontrado">
+                    <H1 id="clienteNome"></H1>
+                    <p id="clienteCpf"></p>
+                    <p id="clienteDataNascimento"></p>
+                    <p id="clienteTelefone"></p>
+                    <p id="clienteEmail"></p>
+                    <p id="clienteEndereco"></p>
+                </div>
+                <div id="mensagemErro"></div>
+
+            <h2>Emprestimo</h2>
+
+            <div id="emprestimoForm" >
+            <label for="valorEmprestimo">Valor do Empréstimo (R$) [Max: 50.000, Min: 500]:</label>
+            <input type="number" id="valorEmprestimo" min="500" max="50000" step="500" required>
+    
+            <label for="formaPagamento">Forma de Pagamento:</label>
+            <select id="formaPagamento">
+                <option value="2">2 meses</option>
+                <option value="3">3 meses</option>
+                <option value="4">4 meses</option>
+                <option value="5">5 meses</option>
+                <option value="6">6 meses</option>
+                <option value="7">7 meses</option>
+                <option value="8">8 meses</option>
+                <option value="9">9 meses</option>
+                <option value="10">10 meses</option>
+                <option value="11">11 meses</option>
+                <option value="12">12 meses</option>
+                
+            </select>
+            <button id="realizarEmprestimo">Realizar Empréstimo</button>
+            
+        </div>
+    </div>
+    
+    <div id="parcelas">
+        
+    </div>
+    <button id="logout">Logout</button>
+    <script  type="module" src="/main.ts"></script>
+    <script  type="module" src="/home.ts"></script>
+
+</body>
+</html>
